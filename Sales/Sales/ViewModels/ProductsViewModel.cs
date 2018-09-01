@@ -2,7 +2,7 @@
 namespace Sales.ViewModels
 {
     using GalaSoft.MvvmLight.Command;
-    using Sale.Common.models;
+    using Sales.Common.models;
     using Sales.Helpers;
     using Sales.Services;
     using System.Collections.Generic;

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using Sales.Common.models;
+using Sales.Domain.Models;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
-using Sale.Common.models;
-using Sales.Domain.Models;
 
 namespace Sales.Api.Controllers
 {
     public class ProductsController : ApiController
     {
-        private DataContex db = new DataContex();
+        private DataContext db = new DataContext();
 
         // GET: api/Products
         public IQueryable<Product> GetProducts()

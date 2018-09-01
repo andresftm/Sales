@@ -7,8 +7,8 @@
     <ProjectGuid>{9711A14D-A5D5-4D9C-A239-76F4DEB15B80}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sale.Common</RootNamespace>
-    <AssemblyName>Sale.Common</AssemblyName>
+    <RootNamespace>Sales.Common</RootNamespace>
+    <AssemblyName>Sales.Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

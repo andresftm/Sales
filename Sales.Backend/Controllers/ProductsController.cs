@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using Sales.Backend.Models;
+using Sales.Common.models;
 using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
-using System.Web;
+using System.Threading.Tasks;
 using System.Web.Mvc;
-using Sale.Common.models;
-using Sales.Backend.Models;
 
 namespace Sales.Backend.Controllers
 {
     public class ProductsController : Controller
     {
-        private LocalDataContex db = new LocalDataContex();
+        private LocalDataContext db = new LocalDataContext();
 
         // GET: Products
         public async Task<ActionResult> Index()

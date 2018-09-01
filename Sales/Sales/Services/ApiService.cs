@@ -7,7 +7,7 @@ namespace Sales.Services
     using System.Threading.Tasks;
     using Newtonsoft.Json;
     using Plugin.Connectivity;
-    using Sale.Common.models;
+    using Sales.Common.models;
     using Sales.Helpers;
 
 

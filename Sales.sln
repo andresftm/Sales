@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.Api", "Sales.Api\Sale
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.Domain", "Sales.Domain\Sales.Domain.csproj", "{884D4782-9858-4D87-B3C7-2B72065D3FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sale.Common", "Sale.Common\Sale.Common.csproj", "{9711A14D-A5D5-4D9C-A239-76F4DEB15B80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.Common", "Sale.Common\Sales.Common.csproj", "{9711A14D-A5D5-4D9C-A239-76F4DEB15B80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -458,9 +458,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D523E330-2FDA-46EB-9A78-B50EE8DFC1A3}
-		RESX_SortFileContentOnSave = True
-		RESX_AutoCreateNewLanguageFiles = True
 		RESX_PrefixTranslations = False
+		RESX_AutoCreateNewLanguageFiles = True
+		RESX_SortFileContentOnSave = True
+		SolutionGuid = {D523E330-2FDA-46EB-9A78-B50EE8DFC1A3}
 	EndGlobalSection
 EndGlobal

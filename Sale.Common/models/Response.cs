@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sale.Common.models
+namespace Sales.Common.models
 {
     public class Response
     {
