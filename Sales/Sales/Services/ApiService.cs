@@ -1,15 +1,15 @@
 ﻿
 namespace Sales.Services
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Net.Http;
-    using System.Threading.Tasks;
+    using Helpers;
     using Newtonsoft.Json;
     using Plugin.Connectivity;
     using Sales.Common.models;
-    using Sales.Helpers;
-
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Text;
+    using System.Threading.Tasks;
 
     public class ApiService
     {
@@ -78,6 +78,43 @@ namespace Sales.Services
             }
         }
 
+        public async Task<Response> Post<T>(string urlBase, string prefix, string controller, T model)
+        {
+            try
+            {
+                var request = JsonConvert.SerializeObject(model);
+                var content = new StringContent(request, Encoding.UTF8, "application/json");
+                var cliente = new HttpClient();
+                cliente.BaseAddress = new Uri(urlBase);
+                var url = $"{prefix}{controller}";
+                var response = await cliente.PostAsync(url, content);
+                var answer = await response.Content.ReadAsStringAsync();
 
+                if (!response.IsSuccessStatusCode)
+                {
+                    return new Response
+                    {
+                        InSucces = false,
+                        Message = answer,
+                    };
+                }
+
+                var obj = JsonConvert.DeserializeObject<T>(answer);
+
+                return new Response
+                {
+                    InSucces = true,
+                    Result = obj,
+                };
+            }
+            catch (Exception ex)
+            {
+                return new Response
+                {
+                    InSucces = false,
+                    Message = ex.Message,
+                };
+            }
+        }
     }
 }

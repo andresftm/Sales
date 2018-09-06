@@ -120,13 +120,55 @@
   <data name="Accept" xml:space="preserve">
     <value>Acceptez !</value>
   </data>
+  <data name="AddProduct" xml:space="preserve">
+    <value>Nouveau produit</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler !</value>
+  </data>
+  <data name="ChangeImage" xml:space="preserve">
+    <value>Touchez el image pour changer!</value>
+  </data>
   <data name="ConectInternet" xml:space="preserve">
     <value>vous plaît conect internet.</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>Vous devez saisir un libellé !</value>
+  </data>
+  <data name="DescriptionPlaceHolder" xml:space="preserve">
+    <value>Veuillez saisir une description de produit</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Erreur!</value>
   </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>De la galerie!</value>
+  </data>
+  <data name="ImageSource" xml:space="preserve">
+    <value>Où prenez-vous la photo?!</value>
+  </data>
+  <data name="NewPicture" xml:space="preserve">
+    <value>Prendre une photo</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="PriceError" xml:space="preserve">
+    <value>Vous devez entrer le prix !</value>
+  </data>
+  <data name="PricePlaceHolder" xml:space="preserve">
+    <value>Saisir le prix du produit</value>
+  </data>
   <data name="Products" xml:space="preserve">
     <value>Produits</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>des propos</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
   </data>
 </root>

@@ -118,15 +118,57 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Accept" xml:space="preserve">
-    <value>Acceptar</value>
+    <value>Aceitar</value>
+  </data>
+  <data name="AddProduct" xml:space="preserve">
+    <value>Novo Produto</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>CANCELAR</value>
+  </data>
+  <data name="ChangeImage" xml:space="preserve">
+    <value>Toque na imagem para mudar!</value>
   </data>
   <data name="ConectInternet" xml:space="preserve">
-    <value>Por favor active el internet.</value>
+    <value>Portuguez</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>Você deve digitar a descrição!</value>
+  </data>
+  <data name="DescriptionPlaceHolder" xml:space="preserve">
+    <value>Digite a descrição do produto!</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="FromGallery" xml:space="preserve">
+    <value>Galeria</value>
+  </data>
+  <data name="ImageSource" xml:space="preserve">
+    <value>Onde você tira a foto ?!</value>
+  </data>
+  <data name="NewPicture" xml:space="preserve">
+    <value>Tirar uma foto</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Preço!</value>
+  </data>
+  <data name="PriceError" xml:space="preserve">
+    <value>Você deve digitar o preço!</value>
+  </data>
+  <data name="PricePlaceHolder" xml:space="preserve">
+    <value>Insira Preço de Produto</value>
+  </data>
   <data name="Products" xml:space="preserve">
-    <value>Productos</value>
+    <value>Produtos</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Observações</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvare</value>
   </data>
 </root>
