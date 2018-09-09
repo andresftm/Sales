@@ -162,7 +162,7 @@ namespace Sales.ViewModels
             this.IsEnabled = false;
 
             var connection = await this.apiService.CheckConnection();
-            if (!connection.InSucces)
+            if (!connection.IsSuccess)
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
@@ -189,7 +189,7 @@ namespace Sales.ViewModels
             var controller = Application.Current.Resources["UrlProductsController"].ToString();
             var response = await this.apiService.Post(url, prefix, controller, product);
 
-            if (!response.InSucces)
+            if (!response.IsSuccess)
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;

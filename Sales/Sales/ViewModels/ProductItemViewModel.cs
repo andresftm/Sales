@@ -53,7 +53,7 @@ namespace Sales.ViewModels
             }
 
             var Conecction = await this.apiService.CheckConnection();
-            if (!Conecction.InSucces)
+            if (!Conecction.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(Languages.Error, Conecction.Message, Languages.Accept);
                 return;
@@ -64,7 +64,7 @@ namespace Sales.ViewModels
             var controller = Application.Current.Resources["UrlProductsController"].ToString();
             var response = await this.apiService.Delete(url, prefix, controller, this.ProductId);
 
-            if (!response.InSucces)
+            if (!response.IsSuccess)
             {
                 await Application.Current.MainPage.DisplayAlert(Languages.Error, response.Message, Languages.Accept);
                 return;

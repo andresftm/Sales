@@ -58,7 +58,7 @@ namespace Sales.ViewModels
             this.IsRefreshing = true;
 
             var Conecction = await this.apiService.CheckConnection();
-            if (!Conecction.InSucces)
+            if (!Conecction.IsSuccess)
             {
                 this.IsRefreshing = false;
                 await Application.Current.MainPage.DisplayAlert(Languages.Error, Conecction.Message, Languages.Accept);
@@ -70,7 +70,7 @@ namespace Sales.ViewModels
             var controller = Application.Current.Resources["UrlProductsController"].ToString();
             var response = await this.apiService.GetList<Product>(url, prefix, controller);
 
-            if (!response.InSucces)
+            if (!response.IsSuccess)
             {
                 this.IsRefreshing = false;
                 await Application.Current.MainPage.DisplayAlert(Languages.Error, response.Message, Languages.Accept);

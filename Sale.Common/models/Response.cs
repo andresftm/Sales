@@ -8,7 +8,7 @@ namespace Sales.Common.models
 {
     public class Response
     {
-        public bool InSucces { get; set; }
+        public bool IsSuccess { get; set; }
 
         public string Message { get; set; }
 
