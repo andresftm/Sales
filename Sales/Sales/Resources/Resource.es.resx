@@ -132,6 +132,15 @@
   <data name="ConectInternet" xml:space="preserve">
     <value>Por favor active el internet.</value>
   </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="ContenConfirmation" xml:space="preserve">
+    <value>¿Estás seguro de eliminar?</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Descripción</value>
   </data>
@@ -140,6 +149,9 @@
   </data>
   <data name="DescriptionPlaceHolder" xml:space="preserve">
     <value>Por favor introduzca la descripción del producto</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
   </data>
   <data name="Error" xml:space="preserve">
     <value>Error</value>
@@ -152,6 +164,9 @@
   </data>
   <data name="NewPicture" xml:space="preserve">
     <value>Toma una foto</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No.</value>
   </data>
   <data name="Price" xml:space="preserve">
     <value>Precio</value>
@@ -170,5 +185,8 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Guardar</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
   </data>
 </root>

@@ -49,8 +49,9 @@ namespace Sales.ViewModels
 
         public ImageSource ImageSource
         {
-            get { return imageSource; }
-            set { imageSource = value; }
+            get { return this.imageSource; }
+            set { this.SetValue(ref this.imageSource, value); }
+
         }
 
         #endregion
@@ -169,18 +170,18 @@ namespace Sales.ViewModels
                 return;
             }
 
-            //byte[] imageArray = null;
-            //if (this.file != null)
-            //{
-            //    imageArray = FilesHelper.ReadFully(this.file.GetStream());
-            //}
+            byte[] imageArray = null;
+            if (this.file != null)
+            {
+                imageArray = FilesHelper.ReadFully(this.file.GetStream());
+            }
 
             var product = new Product
             {
                 Description = this.Description,
                 Price = price,
                 Remarks = this.Remarks,
-                //ageArray = imageArray,
+                ImageArray = imageArray,
             };
 
             var url = Application.Current.Resources["UrlAPI"].ToString();
@@ -201,7 +202,9 @@ namespace Sales.ViewModels
 
             var newProduct = (Product)response.Result;
             var productsViewModel = ProductsViewModel.GetInstance();
-            productsViewModel.Products.Add(newProduct);
+            productsViewModel.MyProducts.Add(newProduct);
+            productsViewModel.RefreshList();
+
 
             this.IsRunning = false;
             this.IsEnabled = true;
