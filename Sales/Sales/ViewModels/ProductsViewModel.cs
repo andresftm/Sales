@@ -41,7 +41,8 @@ namespace Sales.ViewModels
 
         #endregion
 
-        
+        #region Constructors
+
         public ProductsViewModel()
         {
             instance = this;
@@ -49,6 +50,9 @@ namespace Sales.ViewModels
             this.LoadProducts();
         }
 
+        #endregion
+
+        #region Metodos
         private async void LoadProducts()
         {
             this.IsRefreshing = true;
@@ -97,11 +101,14 @@ namespace Sales.ViewModels
                 myListProductItemViewModel.OrderBy(p => p.Description));
             this.IsRefreshing = false;
         }
+        #endregion
 
+        #region Commands
         public ICommand RefreshCommand
         {
             get { return new RelayCommand(LoadProducts); }
-        }
+        } 
+        #endregion
 
         #region Singleton
         private static ProductsViewModel instance;
