@@ -206,6 +206,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\FilesHelper.cs" />
+    <Compile Include="Migrations\201809111732324_Product.cs" />
+    <Compile Include="Migrations\201809111732324_Product.Designer.cs">
+      <DependentUpon>201809111732324_Product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LocalDataContext.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,6 +314,11 @@
       <Project>{884d4782-9858-4d87-b3c7-2b72065d3fa5}</Project>
       <Name>Sales.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809111732324_Product.resx">
+      <DependentUpon>201809111732324_Product.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
