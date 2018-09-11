@@ -1,18 +1,18 @@
-namespace Sales.Backend.Migrations
+namespace Sales.Domain.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Sales.Backend.Models.LocalDataContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Sales.Domain.Models.DataContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Sales.Backend.Models.LocalDataContext context)
+        protected override void Seed(Sales.Domain.Models.DataContext context)
         {
             //  This method will be called after migrating to the latest version.
 

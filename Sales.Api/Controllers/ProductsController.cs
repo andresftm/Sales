@@ -15,6 +15,7 @@ namespace Sales.Api.Controllers
     using System.Web.Http;
     using System.Web.Http.Description;
 
+    [Authorize]
     public class ProductsController : ApiController
     {
         private DataContext db = new DataContext();

@@ -8,6 +8,7 @@ namespace Sales.ViewModels
     using Sales.Common.models;
     using Sales.Helpers;
     using Services;
+    using System;
     using System.Linq;
     using System.Windows.Input;
     using Xamarin.Forms;
@@ -65,6 +66,66 @@ namespace Sales.ViewModels
         #endregion
 
         #region Commands
+        
+
+        public ICommand DeleteCommand
+        {
+            get
+            {
+                return new RelayCommand(Delete);
+            }
+        }
+
+        private async void Delete()
+        {
+            var answer = await Application.Current.MainPage.DisplayAlert(Languages.Confirm, Languages.ContenConfirmation, Languages.Yes, Languages.No);
+
+            if (!answer)
+            {
+                return;
+            }
+
+            this.IsRunning = true;
+            this.isEnabled = false;
+
+            var Conecction = await this.apiService.CheckConnection();
+            if (!Conecction.IsSuccess)
+            {
+                this.IsRunning = false;
+                this.isEnabled = true;
+                await Application.Current.MainPage.DisplayAlert(Languages.Error, Conecction.Message, Languages.Accept);
+                return;
+            }
+
+            var url = Application.Current.Resources["UrlAPI"].ToString();
+            var prefix = Application.Current.Resources["UrlPrefix"].ToString();
+            var controller = Application.Current.Resources["UrlProductsController"].ToString();
+            var response = await this.apiService.Delete(url, prefix, controller, this.Product.ProductId);
+
+            if (!response.IsSuccess)
+            {
+                this.IsRunning = false;
+                this.isEnabled = true;
+                await Application.Current.MainPage.DisplayAlert(Languages.Error, response.Message, Languages.Accept);
+                return;
+            }
+
+            var productsViewModel = ProductsViewModel.GetInstance();
+            var deleteProducto = productsViewModel.MyProducts.Where(p => p.ProductId == this.Product.ProductId).FirstOrDefault();
+
+            if (deleteProducto != null)
+            {
+                productsViewModel.MyProducts.Remove(deleteProducto);
+            }
+
+            productsViewModel.RefreshList();
+
+            this.IsRunning = false;
+            this.isEnabled = true;
+
+            await Application.Current.MainPage.Navigation.PopAsync();
+        }
+
         public ICommand ChangeImageCommand
         {
             get

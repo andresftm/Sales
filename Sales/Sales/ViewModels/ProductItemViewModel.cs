@@ -17,7 +17,6 @@ namespace Sales.ViewModels
         private ApiService apiService;
         #endregion
 
-
         #region Constructors
         public ProductItemViewModel()
         {
@@ -71,13 +70,14 @@ namespace Sales.ViewModels
             }
 
             var productsViewModel = ProductsViewModel.GetInstance();
-            var deleteProducto = productsViewModel.Products.Where(p => p.ProductId == this.ProductId).FirstOrDefault();
+            var deleteProducto = productsViewModel.MyProducts.Where(p => p.ProductId == this.ProductId).FirstOrDefault();
 
-            if(deleteProducto != null)
+            if (deleteProducto != null)
             {
-                productsViewModel.Products.Remove(deleteProducto);
+                productsViewModel.MyProducts.Remove(deleteProducto);
             }
 
+            productsViewModel.RefreshList();
         }
 
         private async void EditProduct()
