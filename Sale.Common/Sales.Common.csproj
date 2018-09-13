@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="models\Product.cs" />
     <Compile Include="models\Response.cs" />
+    <Compile Include="models\TokenResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

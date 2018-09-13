@@ -206,9 +206,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\FilesHelper.cs" />
-    <Compile Include="Migrations\201809111732324_Product.cs" />
-    <Compile Include="Migrations\201809111732324_Product.Designer.cs">
-      <DependentUpon>201809111732324_Product.cs</DependentUpon>
+    <Compile Include="Migrations\201809111813515_Product.cs" />
+    <Compile Include="Migrations\201809111813515_Product.Designer.cs">
+      <DependentUpon>201809111813515_Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\LocalDataContext.cs" />
@@ -316,8 +316,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201809111732324_Product.resx">
-      <DependentUpon>201809111732324_Product.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201809111813515_Product.resx">
+      <DependentUpon>201809111813515_Product.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

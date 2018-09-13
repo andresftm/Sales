@@ -13,12 +13,12 @@ namespace Sales.Backend.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201809111732324_Product"; }
+            get { return "201809111813515_Product"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

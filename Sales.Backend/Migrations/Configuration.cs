@@ -9,7 +9,7 @@ namespace Sales.Backend.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Sales.Backend.Models.LocalDataContext context)
