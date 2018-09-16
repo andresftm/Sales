@@ -61,7 +61,7 @@
         private async void Register()
         {
             //MainViewModel.GetInstance().Register = new RegisterViewModel();
-            //await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage());
+            //await App.Navigator.PushAsync(new RegisterPage());
         }
 
         public ICommand LoginCommand
@@ -134,19 +134,14 @@
                 return;
             }
 
-            await Application.Current.MainPage.DisplayAlert(
-            "Ok",
-              "Yeha",
-              Languages.Accept);
+            Settings.IsRemembered = this.IsRemembered;
+            Settings.AccessToken = token.AccessToken;
+            Settings.TokenType = token.TokenType;
 
-
-            //Settings.IsRemembered = this.IsRemembered;
-            //Settings.AccessToken = token.AccessToken;
-            //Settings.TokenType = token.TokenType;
 
             //var prefix = Application.Current.Resources["UrlPrefix"].ToString();
             //var controller = Application.Current.Resources["UrlUsersController"].ToString();
-            //var response = await this.apiService.GetUser(url, prefix, $"{controller}/GetUser", this.Email, token.TokenType, token.AccessToken);
+            //var response = await this.apiService.GetUser(url, prefix, $"{controller}/GetUser", this.Email, Settings.TokenType, Settings.AccessToken);
             //if (response.IsSuccess)
             //{
             //    var userASP = (UserASP)response.Result;
@@ -154,13 +149,13 @@
             //    Settings.UserASP = JsonConvert.SerializeObject(userASP);
             //}
 
-            //this.IsRunning = false;
-            //this.IsEnabled = true;
-            //this.Email = string.Empty;
-            //this.Password = string.Empty;
+            MainViewModel.GetInstance().Products = new ProductsViewModel();
+            Application.Current.MainPage = new MasterPage();
 
-            //MainViewModel.GetInstance().Products = new ProductsViewModel();
-            //Application.Current.MainPage = new MasterPage();
+            this.IsRunning = false;
+            this.IsEnabled = true;
+            this.Email = string.Empty;
+            this.Password = string.Empty;
         }
         #endregion
     }

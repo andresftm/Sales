@@ -8,7 +8,7 @@
         <ResourceDictionary>
             <infra:InstanceLocater x:Key="Locator"></infra:InstanceLocater>4
 
-            <x:String x:Key="UrlAPI">http://salesapi20180820092456.azurewebsites.net</x:String>
+            <x:String x:Key="UrlAPI">http://mifincavirtual-001-site2.dtempurl.com</x:String>
             <x:String x:Key="UrlPrefix">/api</x:String>
             <x:String x:Key="UrlProductsController">/products</x:String>
         </ResourceDictionary>
