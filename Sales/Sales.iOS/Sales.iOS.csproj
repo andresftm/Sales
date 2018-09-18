@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Implementations\Localize.cs" />
+    <Compile Include="Implementations\PathService.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -151,6 +152,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>11.0.2</Version>
     </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugin.Media">
       <Version>4.0.1.5</Version>
     </PackageReference>
@@ -195,5 +199,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\ic_phonelink_setup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\nouser.png" />
   </ItemGroup>
 </Project>

@@ -60,8 +60,8 @@
 
         private async void Register()
         {
-            //MainViewModel.GetInstance().Register = new RegisterViewModel();
-            //await App.Navigator.PushAsync(new RegisterPage());
+            MainViewModel.GetInstance().Register = new RegisterViewModel();
+            await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage()); // App.Navigator.PushAsync(new RegisterPage());
         }
 
         public ICommand LoginCommand

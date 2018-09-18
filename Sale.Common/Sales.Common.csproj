@@ -47,9 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="models\Claim.cs" />
+    <Compile Include="models\GetUserRequest.cs" />
     <Compile Include="models\Product.cs" />
     <Compile Include="models\Response.cs" />
     <Compile Include="models\TokenResponse.cs" />
+    <Compile Include="models\UserASP.cs" />
+    <Compile Include="models\UserRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
